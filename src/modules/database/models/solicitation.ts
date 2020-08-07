@@ -1,9 +1,9 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Model } from 'objection';
 
-import { IProduct } from '../interfaces/product';
+import { ISolicitation } from '../interfaces/solicitation';
 
-export class Product extends Model implements IProduct {
+export class Solicitation extends Model implements ISolicitation {
   @ApiProperty({ type: 'integer' })
   public id: number;
   @ApiProperty({ type: 'string' })
@@ -21,7 +21,7 @@ export class Product extends Model implements IProduct {
   public updated_at: Date;
 
   public static get tableName(): string {
-    return 'products';
+    return 'solicitations';
   }
 
   public $formatDatabaseJson(json: any): any {
@@ -29,7 +29,7 @@ export class Product extends Model implements IProduct {
     return json;
   }
 
-  public $formatJson(data: IProduct): IProduct {
+  public $formatJson(data: ISolicitation): ISolicitation {
     return data
   }
 }

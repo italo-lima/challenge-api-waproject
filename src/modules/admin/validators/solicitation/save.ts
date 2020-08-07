@@ -1,8 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsInt, IsNotEmpty, IsString, Min, IsNumber, MinLength, IsOptional } from 'class-validator';
-import { IProduct } from 'modules/database/interfaces/product';
+import { ISolicitation } from 'modules/database/interfaces/solicitation';
 
-export class SaveValidator implements IProduct {
+export class SaveValidator implements ISolicitation {
   @IsOptional()
   @IsInt()
   @Min(0)

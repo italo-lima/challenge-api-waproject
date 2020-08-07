@@ -1,4 +1,4 @@
-export interface IProduct {
+export interface ISolicitation {
   id?: number;
   name: string;
   description: string;
